@@ -22,7 +22,7 @@ const links = [
     <div class="sidebar-bottom">
       <ThemeToggle />
       <div class="side-meta">
-        <a :href="profile.resume">Résumé — request a copy</a>
+        <a :href="profile.resume">Request résumé by email</a>
         <a :href="`mailto:${profile.email}`">{{ profile.email }}</a>
       </div>
     </div>

@@ -16,7 +16,7 @@ export default defineNuxtConfig({
       ],
       script: [
         {
-          innerHTML: `(function(){try{var key='portfolio-theme';var saved=localStorage.getItem(key);var mode=saved||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=mode;document.documentElement.style.colorScheme=mode}catch(e){}})()`
+          innerHTML: `(function(){try{var key='portfolio-theme';var saved=localStorage.getItem(key);var mode=(saved==='dark'||saved==='light')?saved:(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=mode;document.documentElement.style.colorScheme=mode}catch(e){}})()`
         }
       ]
     }

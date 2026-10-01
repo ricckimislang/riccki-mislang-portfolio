@@ -75,10 +75,11 @@ useHead({
             <span class="repo-name">{{ repo.name }}</span>
             <span class="repo-copy">{{ repo.description }}</span>
           </div>
-          <a class="repo-link" :href="repo.link" target="_blank" rel="noreferrer">View repo ↗</a>
+          <a v-if="repo.link" class="repo-link" :href="repo.link" target="_blank" rel="noreferrer">View repo ↗</a>
         </div>
       </div>
-      <p class="mt-6 text-sm text-[var(--muted)]">See the complete activity history on <a class="inline-link" :href="profile.github" target="_blank" rel="noreferrer">GitHub ↗</a>.</p>
+      <p v-if="profile.github" class="mt-6 text-sm text-[var(--muted)]">See the complete activity history on <a class="inline-link" :href="profile.github" target="_blank" rel="noreferrer">GitHub ↗</a>.</p>
+      <p v-else class="mt-6 text-sm text-[var(--muted)]">Repository links will be added as projects are published.</p>
     </section>
 
     <footer id="contact" class="site-footer">

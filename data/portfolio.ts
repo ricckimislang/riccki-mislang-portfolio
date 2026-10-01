@@ -14,10 +14,10 @@ export const profile = {
   shortName: 'AM',
   role: 'Full stack developer',
   email: 'hello@alexmorgan.dev',
-  github: 'https://github.com/',
-  linkedin: 'https://www.linkedin.com/',
-  // Contact fallback until a real public/resume.pdf is supplied.
-  resume: '#contact'
+  // Add a verified profile URL when one is available.
+  github: undefined as string | undefined,
+  // The résumé fallback opens a request email until a real public/resume.pdf is supplied.
+  resume: 'mailto:hello@alexmorgan.dev?subject=Resume%20request'
 }
 
 export const achievements = [
@@ -33,9 +33,7 @@ export const projects: Project[] = [
     summary: 'A calm operations desk for independent teams to map work, ownership, and decisions in one place.',
     outcome: 'Reduced weekly status work by turning scattered updates into a shared, searchable record.',
     tags: ['Interface', 'Backend', 'Data', 'Deployment'],
-    // Placeholder URLs: replace with the real project links before launch.
-    demo: 'https://example.com',
-    source: 'https://github.com/'
+    // Sample project content; add verified destinations when they are available.
   },
   {
     slug: 'field-notes',
@@ -44,8 +42,7 @@ export const projects: Project[] = [
     summary: 'A lightweight research log that helps product teams turn interviews into patterns they can revisit.',
     outcome: 'Made synthesis visible across a distributed team with a small, fast publishing workflow.',
     tags: ['Interface', 'Data', 'Accessibility'],
-    // Placeholder URL: replace with the real repository link before launch.
-    source: 'https://github.com/'
+    // Sample project content; add a verified repository URL when it is available.
   }
 ]
 
@@ -76,8 +73,8 @@ export const certifications = [
 ]
 
 export const repositories = [
-  // Placeholder URLs: replace these with the real repository links before launch.
-  { name: 'atlas', description: 'The operations desk case study: a full stack app with a small, durable data model.', link: 'https://github.com/' },
-  { name: 'quiet-ui', description: 'Accessible interface primitives for products that need a little less visual noise.', link: 'https://github.com/' },
-  { name: 'field-notes', description: 'A focused publishing workflow for turning research into a shared team memory.', link: 'https://github.com/' }
+  // Sample repository entries; add verified URLs when they are available.
+  { name: 'atlas', description: 'The operations desk case study: a full stack app with a small, durable data model.' },
+  { name: 'quiet-ui', description: 'Accessible interface primitives for products that need a little less visual noise.' },
+  { name: 'field-notes', description: 'A focused publishing workflow for turning research into a shared team memory.' }
 ]

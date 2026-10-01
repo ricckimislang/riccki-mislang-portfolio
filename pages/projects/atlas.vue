@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { profile } from '~/data/portfolio'
+import { profile, projects } from '~/data/portfolio'
+
+const atlas = projects.find((project) => project.slug === 'atlas')
 useHead({
   title: 'Atlas — Case study',
   meta: [{ name: 'description', content: 'A case study of Atlas, a calm operations desk for independent teams.' }]
@@ -56,8 +58,8 @@ useHead({
       <h2>Outcome</h2>
       <p>The first version shipped as a focused working desk for small teams. It replaced the weekly hunt through updates with a record people could scan, trust, and maintain in a few minutes.</p>
       <div class="case-cta">
-        <a class="button button-primary" href="https://example.com" target="_blank" rel="noreferrer">Open live demo ↗</a>
-        <a class="button button-secondary" href="https://github.com/" target="_blank" rel="noreferrer">View source ↗</a>
+        <a v-if="atlas?.demo" class="button button-primary" :href="atlas.demo" target="_blank" rel="noreferrer">Open live demo ↗</a>
+        <a v-if="atlas?.source" class="button button-secondary" :href="atlas.source" target="_blank" rel="noreferrer">View source ↗</a>
         <a class="button button-secondary" :href="`mailto:${profile.email}`">Start a conversation</a>
       </div>
     </section>
