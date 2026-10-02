@@ -72,7 +72,13 @@ export const certifications = [
   { name: 'Professional Scrum Master I', issuer: 'Scrum.org', date: '2024', url: 'https://www.scrum.org/assessments/professional-scrum-master-certification' }
 ]
 
-export const repositories = [
+export type Repository = {
+  name: string
+  description: string
+  link?: string
+}
+
+export const repositories: Repository[] = [
   // Sample repository entries; add verified URLs when they are available.
   { name: 'atlas', description: 'The operations desk case study: a full stack app with a small, durable data model.' },
   { name: 'quiet-ui', description: 'Accessible interface primitives for products that need a little less visual noise.' },
