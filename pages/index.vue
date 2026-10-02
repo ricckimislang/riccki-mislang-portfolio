@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { achievements, certifications, experience, profile, projects, repositories } from '~/data/portfolio'
+import { achievements, certifications, experience, profile, repositories } from '~/data/portfolio'
+import { featuredProjects } from '~/data/featured-projects'
+import FeaturedProjects from '~/components/FeaturedProjects.vue'
 
 useHead({
   title: `${profile.name} — ${profile.role}`,
@@ -54,9 +56,7 @@ useHead({
 
     <section id="projects" class="pt-[74px] max-[620px]:pt-[58px] border-t border-[var(--line)] scroll-mt-8">
       <SectionHeading index="02" title="Projects" note="selected work" />
-      <div class="grid gap-[14px]">
-        <ProjectCard v-for="project in projects" :key="project.slug" :project="project" />
-      </div>
+      <FeaturedProjects :projects="featuredProjects" />
     </section>
 
     <section id="experience" class="pt-[74px] max-[620px]:pt-[58px] border-t border-[var(--line)] scroll-mt-8">

@@ -76,7 +76,7 @@ onBeforeUnmount(() => {
 <template>
   <div class="hidden max-[820px]:block">
     <div class="relative z-[11] flex items-center justify-between border-b border-[var(--line)] px-5 py-[18px]">
-      <NuxtLink class="font-mono text-[0.8rem] font-medium tracking-[-0.03em] no-underline" to="/#profile" @click="close">A<span>/</span>M <em class="not-italic text-[var(--muted)]">folio</em></NuxtLink>
+      <NuxtLink class="font-mono text-[0.8rem] font-medium tracking-[-0.03em] no-underline" to="/#profile" @click="close">Riccki Rejee <span></span>Mislang <em class="not-italic text-[var(--muted)]">folio</em></NuxtLink>
       <button ref="menuButton" class="cursor-pointer border border-[var(--line)] bg-transparent px-[9px] py-[7px] font-mono text-[0.7rem] text-[var(--text)]" type="button" :aria-expanded="isOpen" aria-controls="mobile-menu" @click="isOpen = !isOpen">
         {{ isOpen ? 'Close' : 'Menu' }}
       </button>
