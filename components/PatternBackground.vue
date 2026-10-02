@@ -1,6 +1,6 @@
 <template>
-  <div class="pattern-layer" aria-hidden="true">
-    <svg viewBox="0 0 1440 960" preserveAspectRatio="none" fill="none">
+  <div class="pointer-events-none fixed inset-0 z-0 opacity-[0.58] [mask-image:radial-gradient(ellipse_67%_65%_at_50%_44%,transparent_0%,transparent_31%,black_68%,black_100%)]" aria-hidden="true">
+    <svg class="h-full w-full" viewBox="0 0 1440 960" preserveAspectRatio="none" fill="none">
       <g stroke="var(--pattern)" stroke-width="1">
         <path d="M30 122H198L254 176H374" />
         <path d="M0 388H116L168 338H272" />

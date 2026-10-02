@@ -7,6 +7,11 @@ export default defineNuxtConfig({
     head: {
       htmlAttrs: { lang: 'en' },
       title: 'Alex Morgan — Full stack developer',
+      link: [
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap' }
+      ],
       meta: [
         { name: 'description', content: 'A considered portfolio of full stack products, systems, and experiments by Alex Morgan.' },
         { name: 'theme-color', content: '#fafafa' },

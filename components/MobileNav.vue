@@ -74,20 +74,20 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="mobile-shell">
-    <div class="mobile-bar">
-      <NuxtLink class="wordmark" to="/#profile" @click="close">A<span>/</span>M <em>folio</em></NuxtLink>
-      <button ref="menuButton" class="menu-button" type="button" :aria-expanded="isOpen" aria-controls="mobile-menu" @click="isOpen = !isOpen">
+  <div class="hidden max-[820px]:block">
+    <div class="relative z-[11] flex items-center justify-between border-b border-[var(--line)] px-5 py-[18px]">
+      <NuxtLink class="font-mono text-[0.8rem] font-medium tracking-[-0.03em] no-underline" to="/#profile" @click="close">A<span>/</span>M <em class="not-italic text-[var(--muted)]">folio</em></NuxtLink>
+      <button ref="menuButton" class="cursor-pointer border border-[var(--line)] bg-transparent px-[9px] py-[7px] font-mono text-[0.7rem] text-[var(--text)]" type="button" :aria-expanded="isOpen" aria-controls="mobile-menu" @click="isOpen = !isOpen">
         {{ isOpen ? 'Close' : 'Menu' }}
       </button>
     </div>
-    <nav v-if="isOpen" ref="menu" id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
-      <a v-for="(link, index) in links" :key="link.id" :href="`/#${link.id}`" @click="close">
+    <nav v-if="isOpen" ref="menu" id="mobile-menu" class="fixed inset-0 z-[12] grid content-start gap-[10px] bg-[var(--bg)] px-5 pb-7 pt-[82px]" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+      <a class="border-b border-[var(--line)] px-1 py-[14px] font-mono no-underline" v-for="(link, index) in links" :key="link.id" :href="`/#${link.id}`" @click="close">
         {{ String(index + 1).padStart(2, '0') }} — {{ link.label }}
       </a>
-      <ThemeToggle />
-      <a :href="profile.resume" @click="close">Request résumé by email</a>
-      <a :href="`mailto:${profile.email}`" @click="close">{{ profile.email }}</a>
+      <div class="mt-[14px]"><ThemeToggle /></div>
+      <a class="border-b border-[var(--line)] px-1 py-[14px] font-mono no-underline" :href="profile.resume" @click="close">Request résumé by email</a>
+      <a class="border-b border-[var(--line)] px-1 py-[14px] font-mono no-underline" :href="`mailto:${profile.email}`" @click="close">{{ profile.email }}</a>
     </nav>
   </div>
 </template>
