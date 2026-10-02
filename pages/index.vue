@@ -16,19 +16,13 @@ useHead({
         <div class="min-w-0">
           <div class="font-mono text-[0.7rem] uppercase leading-[1.3] tracking-[0.08em] text-[var(--faint)] mb-7">01 /
             Profile</div>
-          <h1 class="m-0 font-mono font-medium leading-[0.98] tracking-[-0.1em] text-[clamp(2.4rem,5vw,4.3rem)]">Alex
-            <span class="text-[var(--muted)]">Morgan</span></h1>
-          <p class="mt-[26px] max-w-[490px] text-[1.02rem] leading-[1.75] text-[var(--muted)]">I build thoughtful web
-            products for teams doing meaningful work. My best days sit where a clear interface meets a dependable
-            system.</p>
-          <p class="mt-[10px] max-w-[490px] text-[1.02rem] leading-[1.75] text-[var(--muted)]">Currently making tools
-            for small teams, with an eye for the quiet details that help people move with confidence.</p>
-          <div class="mt-[30px] flex flex-wrap gap-[10px]">
-            <a class="inline-flex min-h-[42px] items-center justify-center rounded-[3px] border border-[var(--text)] px-[14px] py-2 font-mono text-[0.72rem] no-underline transition-colors duration-150 bg-[var(--inverse)] text-[var(--inverse-text)] hover:bg-transparent hover:text-[var(--text)]"
-              href="#projects">View projects</a>
-            <a class="inline-flex min-h-[42px] items-center justify-center rounded-[3px] border border-[var(--text)] px-[14px] py-2 font-mono text-[0.72rem] no-underline transition-colors duration-150 border-[var(--line-strong)] text-[var(--text)] hover:border-[var(--text)] hover:bg-[var(--surface)]"
-              :href="`mailto:${profile.email}`">Contact me</a>
-          </div>
+          <h1 class="m-0 font-mono font-medium leading-[0.98] tracking-[-0.1em] text-[clamp(2.4rem,5vw,4.3rem)]">Riccki Rejee
+            <span class="text-[var(--muted)]">Mislang</span>
+          </h1>
+          <p class="mt-[26px] max-w-[490px] text-[1.02rem] leading-[1.75] text-[var(--muted)]">I'm a full stack web
+            developer with over four years of freelance experience, building applications from interface to backend.</p>
+          <p class="mt-[10px] max-w-[490px] text-[1.02rem] leading-[1.75] text-[var(--muted)]">Currently working
+            as an IT instructor, sharing my knowledge and practical development experience with students.</p>
         </div>
         <div
           class="relative flex w-full items-end justify-start overflow-hidden border border-[var(--line-strong)] bg-[linear-gradient(145deg,var(--surface-strong),var(--surface))] p-3 text-[var(--muted)] before:absolute before:inset-x-[17%] before:bottom-0 before:top-[13%] before:rounded-t-[100px] before:border before:border-b-0 before:border-[var(--line-strong)] after:absolute after:inset-x-[33%] after:top-[25%] after:aspect-square after:rounded-full after:border after:border-[var(--line-strong)] max-[620px]:aspect-[4/5] max-[620px]:max-w-[300px]"
@@ -36,13 +30,26 @@ useHead({
           <small class="relative z-[1] font-mono text-[0.62rem]">portrait / 4:5</small>
         </div>
       </div>
-      <div class="mt-[66px] grid grid-cols-2 gap-4 max-[620px]:mt-12 max-[620px]:grid-cols-1 max-[620px]:gap-5"
-        aria-label="Selected achievements">
-        <div v-for="item in achievements" :key="item.label" class="border-t border-[var(--line-strong)] pt-[13px]">
-          <span class="block font-mono text-[1.02rem] font-medium">{{ item.value }}</span>
-          <span class="mt-[3px] block text-[0.77rem] text-[var(--muted)]">{{ item.label }}</span>
+      <aside class="mb-8 mt-8 border border-[var(--line)] bg-[color-mix(in_srgb,var(--surface)_40%,var(--bg))]"
+        aria-labelledby="achievements-heading">
+        <div class="border-b border-[var(--line)] px-4 py-2">
+          <h2 id="achievements-heading"
+            class="m-0 shrink-0 font-mono text-[0.66rem] font-normal uppercase tracking-[0.1em] text-[var(--muted)]">
+            Achievements</h2>
         </div>
-      </div>
+        <dl class="m-0 grid grid-cols-2 min-[621px]:grid-cols-4">
+          <div v-for="item in achievements" :key="`${item.value}-${item.label}`"
+            class="flex min-w-0 flex-col items-start border-[var(--line)] px-4 py-3 even:border-l max-[620px]:[&:nth-child(n+3)]:border-t min-[621px]:[&:not(:first-child)]:border-l">
+            <dt class="mt-1.5 text-[0.72rem] leading-snug text-[var(--muted)]">{{ item.label }}</dt>
+            <dd
+              class="order-first m-0 flex items-center gap-2 font-mono text-[1.5rem] font-medium leading-none tracking-[-0.05em] text-[var(--text)]">
+              <img v-if="item.icon" :src="item.icon" alt="PSITS Region XII" width="28" height="28"
+                class="h-7 w-7 shrink-0 rounded-full object-contain" />
+              {{ item.value }}
+            </dd>
+          </div>
+        </dl>
+      </aside>
     </section>
 
     <section id="projects" class="pt-[74px] max-[620px]:pt-[58px] border-t border-[var(--line)] scroll-mt-8">

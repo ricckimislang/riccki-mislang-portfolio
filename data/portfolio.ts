@@ -21,8 +21,10 @@ export const profile = {
 }
 
 export const achievements = [
-  { value: '18 mo', label: 'shipping products with small teams' },
-  { value: '06', label: 'systems taken from idea to release' }
+  { value: '4+ yrs', label: 'freelance development' },
+  { value: '10+', label: 'applications built' },
+  { value: '7th', label: 'PSITS Java placement', icon: '/images/psits-region-xii.png' },
+  { value: '6th', label: 'PSITS Java placement', icon: '/images/psits-region-xii.png' }
 ]
 
 export const projects: Project[] = [
