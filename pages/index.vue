@@ -14,44 +14,90 @@ useHead({
   <div
     class="relative z-[1] mx-auto w-full max-w-[880px] px-9 pb-[110px] pt-[72px] max-[820px]:px-5 max-[820px]:pb-[78px] max-[820px]:pt-[52px]">
     <section id="profile" class="scroll-mt-8">
+  <div
+    class="grid grid-cols-1 items-center gap-[30px] min-[621px]:grid-cols-[minmax(0,1.65fr)_minmax(0,1fr)] min-[621px]:gap-9"
+  >
+    <!-- Text -->
+    <div
+      class="order-2 min-w-0 text-center min-[621px]:order-1 min-[621px]:text-left"
+    >
+      <h1
+        class="m-0 font-mono font-medium leading-[0.98] tracking-[-0.1em] text-[clamp(2.4rem,5vw,4.3rem)]"
+      >
+        Riccki Rejee
+        <span class="text-[var(--muted)]">Mislang</span>
+      </h1>
+
+      <p
+        class="mx-auto mt-[26px] max-w-[490px] text-[1.02rem] leading-[1.75] text-[var(--muted)] min-[621px]:mx-0"
+      >
+        I'm a full stack web developer with over four years of freelance
+        experience, building applications from interface to backend.
+      </p>
+
+      <p
+        class="mx-auto mt-[10px] max-w-[490px] text-[1.02rem] leading-[1.75] text-[var(--muted)] min-[621px]:mx-0"
+      >
+        Currently working as an IT instructor, sharing my knowledge and
+        practical development experience with students.
+      </p>
+    </div>
+
+    <!-- Image -->
+    <div
+      class="order-1 relative mx-auto flex w-full items-end justify-start overflow-hidden rounded-md border-[0.5px] border-[var(--line-strong)] bg-[linear-gradient(145deg,var(--surface-strong),var(--surface))] p-3 text-[var(--muted)] max-[620px]:aspect-[4/5] max-[620px]:max-w-[300px] min-[621px]:order-2 min-[621px]:mx-0"
+      role="img"
+      aria-label="Riccki Rejee Mislang"
+    >
+      <img
+        src="/images/portfolio-profile-2.png"
+        alt="Riccki Rejee Mislang"
+        class="h-full w-full object-cover"
+      />
+    </div>
+  </div>
+
+  <!-- Achievements -->
+  <aside
+    class="mb-8 mt-8 border border-[var(--line)] bg-[color-mix(in_srgb,var(--surface)_40%,var(--bg))]"
+    aria-labelledby="achievements-heading"
+  >
+    <div class="border-b border-[var(--line)] px-4 py-2">
+      <h2
+        id="achievements-heading"
+        class="m-0 shrink-0 font-mono text-[0.66rem] font-normal uppercase tracking-[0.1em] text-[var(--muted)]"
+      >
+        Achievements
+      </h2>
+    </div>
+
+    <dl class="m-0 grid grid-cols-2 min-[621px]:grid-cols-4">
       <div
-        class="grid grid-cols-1 items-stretch gap-[30px] min-[621px]:grid-cols-[minmax(0,1.65fr)_minmax(0,1fr)] min-[621px]:gap-9">
-        <div class="min-w-0">
-          <h1 class="m-0 font-mono font-medium leading-[0.98] tracking-[-0.1em] text-[clamp(2.4rem,5vw,4.3rem)]">Riccki Rejee
-            <span class="text-[var(--muted)]">Mislang</span>
-          </h1>
-          <p class="mt-[26px] max-w-[490px] text-[1.02rem] leading-[1.75] text-[var(--muted)]">I'm a full stack web
-            developer with over four years of freelance experience, building applications from interface to backend.</p>
-          <p class="mt-[10px] max-w-[490px] text-[1.02rem] leading-[1.75] text-[var(--muted)]">Currently working
-            as an IT instructor, sharing my knowledge and practical development experience with students.</p>
-        </div>
-        <div
-          class="relative flex w-full items-end justify-start overflow-hidden rounded-md border-[0.5px] border-[var(--line-strong)] bg-[linear-gradient(145deg,var(--surface-strong),var(--surface))] p-3 text-[var(--muted)] max-[620px]:aspect-[4/5] max-[620px]:max-w-[300px]"
-          role="img" aria-label="Riccki Rejee Mislang">
-          <img src="/images/portfolio-profile-2.png" alt="Riccki Rejee Mislang">
-        </div>
+        v-for="item in achievements"
+        :key="`${item.value}-${item.label}`"
+        class="flex min-w-0 flex-col items-start border-[var(--line)] px-4 py-3 even:border-l max-[620px]:[&:nth-child(n+3)]:border-t min-[621px]:[&:not(:first-child)]:border-l"
+      >
+        <dt class="mt-1.5 text-[0.72rem] leading-snug text-[var(--muted)]">
+          {{ item.label }}
+        </dt>
+
+        <dd
+          class="order-first m-0 flex items-center gap-2 font-mono text-[1.5rem] font-medium leading-none tracking-[-0.05em] text-[var(--text)]"
+        >
+          <img
+            v-if="item.icon"
+            :src="item.icon"
+            alt="PSITS Region XII"
+            width="28"
+            height="28"
+            class="h-7 w-7 shrink-0 rounded-full object-contain"
+          />
+          {{ item.value }}
+        </dd>
       </div>
-      <aside class="mb-8 mt-8 border border-[var(--line)] bg-[color-mix(in_srgb,var(--surface)_40%,var(--bg))]"
-        aria-labelledby="achievements-heading">
-        <div class="border-b border-[var(--line)] px-4 py-2">
-          <h2 id="achievements-heading"
-            class="m-0 shrink-0 font-mono text-[0.66rem] font-normal uppercase tracking-[0.1em] text-[var(--muted)]">
-            Achievements</h2>
-        </div>
-        <dl class="m-0 grid grid-cols-2 min-[621px]:grid-cols-4">
-          <div v-for="item in achievements" :key="`${item.value}-${item.label}`"
-            class="flex min-w-0 flex-col items-start border-[var(--line)] px-4 py-3 even:border-l max-[620px]:[&:nth-child(n+3)]:border-t min-[621px]:[&:not(:first-child)]:border-l">
-            <dt class="mt-1.5 text-[0.72rem] leading-snug text-[var(--muted)]">{{ item.label }}</dt>
-            <dd
-              class="order-first m-0 flex items-center gap-2 font-mono text-[1.5rem] font-medium leading-none tracking-[-0.05em] text-[var(--text)]">
-              <img v-if="item.icon" :src="item.icon" alt="PSITS Region XII" width="28" height="28"
-                class="h-7 w-7 shrink-0 rounded-full object-contain" />
-              {{ item.value }}
-            </dd>
-          </div>
-        </dl>
-      </aside>
-    </section>
+    </dl>
+  </aside>
+</section>
 
     <section id="projects" class="pt-[74px] max-[620px]:pt-[58px] border-t border-[var(--line)] scroll-mt-8">
       <SectionHeading index="01" title="Projects" note="Featured Projects" />
