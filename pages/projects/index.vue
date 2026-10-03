@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { projects } from '~/data/portfolio'
-useHead({ title: 'Projects — Alex Morgan' })
+useHead({ title: 'Projects — Riccki Rejee Mislang' })
 </script>
 
 <template>

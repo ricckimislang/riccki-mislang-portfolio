@@ -6,16 +6,16 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
-      title: 'Alex Morgan — Full stack developer',
+      title: 'Riccki Rejee Mislang — Full stack developer',
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap' }
       ],
       meta: [
-        { name: 'description', content: 'A considered portfolio of full stack products, systems, and experiments by Alex Morgan.' },
+        { name: 'description', content: 'A considered portfolio of full stack products, systems, and experiments by Riccki Rejee Mislang.' },
         { name: 'theme-color', content: '#fafafa' },
-        { property: 'og:title', content: 'Alex Morgan — Full stack developer' },
+        { property: 'og:title', content: 'Riccki Rejee Mislang — Full stack developer' },
         { property: 'og:description', content: 'A considered portfolio of full stack products, systems, and experiments.' },
         { property: 'og:type', content: 'website' }
       ],

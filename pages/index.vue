@@ -28,8 +28,7 @@ useHead({
         </div>
         <div
           class="relative flex w-full items-end justify-start overflow-hidden border border-[var(--line-strong)] bg-[linear-gradient(145deg,var(--surface-strong),var(--surface))] p-3 text-[var(--muted)] before:absolute before:inset-x-[17%] before:bottom-0 before:top-[13%] before:rounded-t-[100px] before:border before:border-b-0 before:border-[var(--line-strong)] after:absolute after:inset-x-[33%] after:top-[25%] after:aspect-square after:rounded-full after:border after:border-[var(--line-strong)] max-[620px]:aspect-[4/5] max-[620px]:max-w-[300px]"
-          role="img" aria-label="Portrait placeholder for Alex Morgan">
-          <small class="relative z-[1] font-mono text-[0.62rem]">portrait / 4:5</small>
+          role="img" aria-label="Riccki Rejee Mislang">
         </div>
       </div>
       <aside class="mb-8 mt-8 border border-[var(--line)] bg-[color-mix(in_srgb,var(--surface)_40%,var(--bg))]"
@@ -112,7 +111,7 @@ useHead({
 
     <footer id="contact" class="mt-[94px] border-t border-[var(--line)] pt-5 text-[0.75rem] text-[var(--muted)]">
       <div class="flex items-center justify-between gap-5 max-[620px]:flex-col max-[620px]:items-start">
-        <span>© {{ new Date().getFullYear() }} Alex Morgan</span>
+        <span>© {{ new Date().getFullYear() }}Riccki Rejee Mislang</span>
         <a class="underline decoration-[var(--line-strong)] decoration-1 underline-offset-4 transition-colors duration-150 hover:text-[var(--muted)] hover:decoration-[var(--text)]"
           href="#profile">Back to top ↑</a>
       </div>

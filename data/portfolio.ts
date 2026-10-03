@@ -10,14 +10,14 @@ export type Project = {
 }
 
 export const profile = {
-  name: 'Alex Morgan',
-  shortName: 'AM',
+  name: 'Riccki Rejee Mislang',
+  shortName: 'RRM',
   role: 'Full stack developer',
-  email: 'hello@alexmorgan.dev',
+  email: 'codingriccki@gmail.com',
   // Add a verified profile URL when one is available.
   github: undefined as string | undefined,
   // The résumé fallback opens a request email until a real public/resume.pdf is supplied.
-  resume: 'mailto:hello@alexmorgan.dev?subject=Resume%20request'
+  resume: 'mailto:codingriccki@gmail.com?subject=Resume%20request'
 }
 
 export const achievements = [

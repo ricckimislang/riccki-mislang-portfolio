@@ -1,4 +1,4 @@
-# Alex Morgan portfolio
+# Riccki Rejee Mislang portfolio
 
 This is a Nuxt portfolio site with a homepage, project index, and case study pages.
 
