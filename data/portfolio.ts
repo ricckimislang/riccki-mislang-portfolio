@@ -10,7 +10,7 @@ export type Project = {
 }
 
 export const profile = {
-  'profile-image': '/images/riccki-rejee-mislang.jpg',
+  profileImage: '/images/riccki-rejee-mislang.jpg',
   name: 'Riccki Rejee Mislang',
   shortName: 'RRM',
   role: 'Full stack developer',
