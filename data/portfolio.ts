@@ -10,12 +10,12 @@ export type Project = {
 }
 
 export const profile = {
+  'profile-image': '/images/riccki-rejee-mislang.jpg',
   name: 'Riccki Rejee Mislang',
   shortName: 'RRM',
   role: 'Full stack developer',
   email: 'codingriccki@gmail.com',
-  // Add a verified profile URL when one is available.
-  github: undefined as string | undefined,
+  github: 'https://github.com/ricckimislang',
   // The résumé fallback opens a request email until a real public/resume.pdf is supplied.
   resume: 'mailto:codingriccki@gmail.com?subject=Resume%20request'
 }

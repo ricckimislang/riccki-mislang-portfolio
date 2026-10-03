@@ -2,6 +2,7 @@
 import { achievements, certifications, experience, profile, repositories } from '~/data/portfolio'
 import { featuredProjects } from '~/data/featured-projects'
 import FeaturedProjects from '~/components/FeaturedProjects.vue'
+import GitHubContributions from '~/components/GitHubContributions.vue'
 
 useHead({
   title: `${profile.name} — ${profile.role}`,
@@ -16,8 +17,6 @@ useHead({
       <div
         class="grid grid-cols-1 items-stretch gap-[30px] min-[621px]:grid-cols-[minmax(0,1.65fr)_minmax(0,1fr)] min-[621px]:gap-9">
         <div class="min-w-0">
-          <div class="font-mono text-[0.7rem] uppercase leading-[1.3] tracking-[0.08em] text-[var(--faint)] mb-7">01 /
-            Profile</div>
           <h1 class="m-0 font-mono font-medium leading-[0.98] tracking-[-0.1em] text-[clamp(2.4rem,5vw,4.3rem)]">Riccki Rejee
             <span class="text-[var(--muted)]">Mislang</span>
           </h1>
@@ -27,8 +26,9 @@ useHead({
             as an IT instructor, sharing my knowledge and practical development experience with students.</p>
         </div>
         <div
-          class="relative flex w-full items-end justify-start overflow-hidden border border-[var(--line-strong)] bg-[linear-gradient(145deg,var(--surface-strong),var(--surface))] p-3 text-[var(--muted)] before:absolute before:inset-x-[17%] before:bottom-0 before:top-[13%] before:rounded-t-[100px] before:border before:border-b-0 before:border-[var(--line-strong)] after:absolute after:inset-x-[33%] after:top-[25%] after:aspect-square after:rounded-full after:border after:border-[var(--line-strong)] max-[620px]:aspect-[4/5] max-[620px]:max-w-[300px]"
+          class="relative flex w-full items-end justify-start overflow-hidden rounded-md border-[0.5px] border-[var(--line-strong)] bg-[linear-gradient(145deg,var(--surface-strong),var(--surface))] p-3 text-[var(--muted)] max-[620px]:aspect-[4/5] max-[620px]:max-w-[300px]"
           role="img" aria-label="Riccki Rejee Mislang">
+          <img src="/images/portfolio-profile-2.png" alt="Riccki Rejee Mislang">
         </div>
       </div>
       <aside class="mb-8 mt-8 border border-[var(--line)] bg-[color-mix(in_srgb,var(--surface)_40%,var(--bg))]"
@@ -54,12 +54,12 @@ useHead({
     </section>
 
     <section id="projects" class="pt-[74px] max-[620px]:pt-[58px] border-t border-[var(--line)] scroll-mt-8">
-      <SectionHeading index="02" title="Projects" note="selected work" />
+      <SectionHeading index="01" title="Projects" note="Featured Projects" />
       <FeaturedProjects :projects="featuredProjects" />
     </section>
 
     <section id="experience" class="pt-[74px] max-[620px]:pt-[58px] border-t border-[var(--line)] scroll-mt-8">
-      <SectionHeading index="03" title="Experience" note="how I got here" />
+      <SectionHeading index="02" title="Experience" note="how I got here" />
       <div class="grid">
         <article v-for="item in experience" :key="`${item.dates}-${item.organization}`"
           class="grid grid-cols-[116px_minmax(0,1fr)] gap-6 border-t border-[var(--line)] pb-[22px] pt-5 max-[620px]:grid-cols-1 max-[620px]:gap-1">
@@ -75,7 +75,7 @@ useHead({
     </section>
 
     <section id="certifications" class="pt-[74px] max-[620px]:pt-[58px] border-t border-[var(--line)] scroll-mt-8">
-      <SectionHeading index="04" title="Certifications" note="verified learning" />
+      <SectionHeading index="03" title="Certifications" note="verified learning" />
       <div class="grid">
         <div v-for="credential in certifications" :key="credential.name"
           class="grid grid-cols-[minmax(0,1fr)_auto] gap-[18px] border-t border-[var(--line)] py-[17px] max-[620px]:grid-cols-1 max-[620px]:gap-[5px]">
@@ -90,19 +90,8 @@ useHead({
     </section>
 
     <section id="github" class="pt-[74px] max-[620px]:pt-[58px] border-t border-[var(--line)] scroll-mt-8">
-      <SectionHeading index="05" title="GitHub" note="selected repositories" />
-      <div class="grid">
-        <div v-for="repo in repositories" :key="repo.name"
-          class="grid grid-cols-[minmax(0,1fr)_auto] gap-[18px] border-t border-[var(--line)] py-[17px] max-[620px]:grid-cols-1 max-[620px]:gap-[5px]">
-          <div>
-            <span class="block text-[0.9rem] font-semibold">{{ repo.name }}</span>
-            <span class="mt-[5px] text-[0.76rem] text-[var(--muted)]">{{ repo.description }}</span>
-          </div>
-          <a v-if="repo.link"
-            class="self-start text-right font-mono text-[0.66rem] text-[var(--text)] underline underline-offset-[3px] max-[620px]:text-left"
-            :href="repo.link" target="_blank" rel="noreferrer">View repo ↗</a>
-        </div>
-      </div>
+      <SectionHeading index="04" title="GitHub" note="selected repositories" />
+      <GitHubContributions />
       <p v-if="profile.github" class="mt-6 text-sm text-[var(--muted)]">See the complete activity history on <a
           class="underline decoration-[var(--line-strong)] decoration-1 underline-offset-4 transition-colors duration-150 hover:text-[var(--muted)] hover:decoration-[var(--text)]"
           :href="profile.github" target="_blank" rel="noreferrer">GitHub ↗</a>.</p>
