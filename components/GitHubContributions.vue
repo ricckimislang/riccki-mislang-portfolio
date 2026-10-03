@@ -106,19 +106,11 @@ const monthLabels = computed(() => weeks.value.map((week) => {
 
 <style scoped>
 .contribution-calendar {
-  --activity-0: #ebedf0;
-  --activity-1: #9be9a8;
-  --activity-2: #40c463;
-  --activity-3: #30a14e;
-  --activity-4: #216e39;
-}
-
-:global(:root[data-theme="dark"]) .contribution-calendar {
-  --activity-0: #272d2d;
-  --activity-1: #0e4429;
-  --activity-2: #006d32;
-  --activity-3: #26a641;
-  --activity-4: #39d353;
+  --activity-0: var(--surface-strong);
+  --activity-1: var(--line);
+  --activity-2: var(--line-strong);
+  --activity-3: var(--faint);
+  --activity-4: var(--muted);
 }
 
 .calendar-scroll {

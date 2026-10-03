@@ -29,7 +29,7 @@ export const featuredProjects: FeaturedProject[] = [
     name: 'Hardware Management System',
     category: 'Business operations',
     summary: 'A centralized application for business owners to manage payroll, track employee attendance, and oversee full inventory in one place.',
-    techStack: [],
+    techStack: ['Laravel', 'Tailwind CSS', 'MySQL'],
     monogram: 'Hm',
     accent: '#318d8a',
     link: 'https://example.com/projects/hardware-management'
@@ -39,7 +39,7 @@ export const featuredProjects: FeaturedProject[] = [
     name: 'Hotel Reservation Web App',
     category: 'PCC Hotel · Reservations',
     summary: 'A custom booking system for PCC Hotel, built to streamline reservations and improve the efficiency of front-desk bookings.',
-    techStack: [],
+    techStack: ['Laravel', 'Tailwind CSS', 'MySQL'],
     monogram: 'Hr',
     accent: '#b68b3b',
     link: 'https://example.com/projects/hotel-reservation'
@@ -49,7 +49,7 @@ export const featuredProjects: FeaturedProject[] = [
     name: 'Attendance & Payroll System',
     category: 'Employee management',
     summary: 'A functional employee management tool built with Laravel and Tailwind CSS, bringing attendance and payroll workflows together with reliable data persistence.',
-    techStack: ['Laravel', 'Tailwind CSS'],
+    techStack: ['Laravel', 'Vue','Tailwind CSS', 'MySQL'],
     monogram: 'Ap',
     accent: '#b96070',
     link: 'https://example.com/projects/attendance-payroll'
@@ -58,8 +58,8 @@ export const featuredProjects: FeaturedProject[] = [
     slug: 'dormitory-management',
     name: 'Dormitory Management System',
     category: 'Frontend architecture',
-    summary: 'A dormitory management frontend built with Vue.js and Vite. Resolved MIME type and build configuration issues to support seamless deployment in local WAMP environments.',
-    techStack: ['Vue.js', 'Vite', 'WAMP'],
+    summary: 'A web-based dormitory management system designed to help staff manage tenants, payments, billing, and dormitory records in one organized platform. It simplifies everyday administrative tasks and makes it easier to keep track of tenant information and payment status.',
+    techStack: ['Vue.js', 'Laravel', 'Inertia.js', 'Tailwind CSS', 'MySQL'],
     monogram: 'Dm',
     accent: '#59875b',
     link: 'https://example.com/projects/dormitory-management'
@@ -69,7 +69,7 @@ export const featuredProjects: FeaturedProject[] = [
     name: 'ISP Management System',
     category: 'Internet service operations',
     summary: 'A system for customers, internet plans, billing, and payments. Includes invoices, overdue tracking, receipts, collection reports, installation requests, technician tasks, location mapping, and activity records.',
-    techStack: [],
+    techStack: ['Vue.js', 'Laravel', 'Inertia.js', 'Tailwind CSS', 'MySQL'],
     monogram: 'Is',
     accent: '#537ec7',
     link: 'https://example.com/projects/isp-management'
